@@ -1,0 +1,21 @@
+.contenedor__productos{
+    width: 100%;
+    height: 100vh;
+    background-color: burlywood;
+    display: flex;
+    flex-flow: row wrap;
+    .contenedor__form{
+        width: 20%;
+        height: auto;
+        background-color: red;
+    }
+    .contenedor__stock{
+        width: 80%;
+        background-color: blue;
+        .contenedor__laptop{
+            width: 100%;
+            height: 100%;
+            background-color: green;
+        }
+    }
+}

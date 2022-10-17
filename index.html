@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XOR | STORE</title>
+    <link rel="stylesheet" href="./sass/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__bars">
+                <img src="./img/bars.png" alt="Bars" class="nav__barsImg">
+            </div>
+            <div class="nav__navbar nav__active">
+                <ul class="nav__ul">
+                    <li class="nav__li"><a class="nav__link" href="#">img-1</a></li>
+                    <li class="nav__li"><a class="nav__link" href="#">img-2</a></li>
+                    <li class="nav__li"><a class="nav__link" href="#">img-3</a></li>
+                </ul>
+            </div>
+            <div class="nav__icons">
+                <h4 class="nav__title">XOR</h4>
+                <img src="./img/log-dragon.png" alt="Logo" class="nav__icon">
+            </div>
+            <div class="nav__shopping">
+                <img src="./img/carrito.png" alt="Cart" class="nav__cart">
+                <p class="nav__product">0</p>
+            </div>
+        </nav>
+        <div class="header__carrusel">
+            <div class="header__arrows">
+                <img class="header__left" src="./img/left.png" alt="left">
+                <img class="header__right" src="./img/right.png" alt="right">
+            </div>
+            <div class="header__sliders">
+                <div class="header__slide-1"></div>
+                <div class="header__slide-2"></div>
+                <div class="header__slide-3"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="contenedor__marcas">
+            <div class="contenedor__mark contenedor__markActive">
+                <div class="contenedor__marca">
+                    <img src="./img/acer.png" alt="acer" class="contenedor__imgMark">
+                </div>
+                <div class="contenedor__marca">
+                    <img src="./img/asus.png" alt="asus" class="contenedor__imgMark">
+                </div>
+                <div class="contenedor__marca">
+                    <img src="./img/dell.png" alt="dell" class="contenedor__imgMark">
+                </div>
+                <div class="contenedor__marca">
+                    <img src="./img/hp.png" alt="hp" class="contenedor__imgMark">
+                </div>
+                <div class="contenedor__marca">
+                    <img src="./img/lenovo.png" alt="lenovo" class="contenedor__imgMark">
+                </div>
+                <div class="contenedor__marca">
+                    <img src="./img/msi.png" alt="msi" class="contenedor__imgMark">
+                </div>
+            </div>
+        </div>
+        <div class="contenedor__productos">
+            <form action="" class="contenedor__form">
+                <div class="contenedor__formMark">
+                    <h5 class="contenedor__tituloMark">Marcas<i class="fa-solid fa-plus"></i></h5>
+                    <div class="contenedor__checkMark">
+                        <div class="contenedor__checks">
+                            <input type="checkbox" name="Acer" id="Acer" value="acer">
+                            <label for="Acer">Acer<span class="contenedor__AcerCant">0</span></label>
+                        </div>
+                        <div class="contenedor__checks">
+                            <input type="checkbox" name="Asus" id="Asus" value="asus">
+                            <label for="Asus">Asus<span class="contenedor__AsusCant">0</span></label>
+                        </div>
+                        <div class="contenedor__checks">
+                            <input type="checkbox" name="Dell" id="Dell" value="dell">
+                            <label for="Dell">Dell<span class="contenedor__DellCant">0</span></label>
+                        </div>
+                        <div class="contenedor__checks">
+                            <input type="checkbox" name="Msi" id="Msi" value="msi">
+                            <label for="Msi">Msi<span class="contenedor__MsiCant">0</span></label>
+                        </div>
+                        <div class="contenedor__checks">
+                            <input type="checkbox" name="Lenovo" id="Lenovo" value="lenovo">
+                            <label for="Lenovo">Lenovo<span class="contenedor__LenovoCant">0</span></label>
+                        </div>
+                        <div class="contenedor__checks">
+                            <input type="checkbox" name="Hp" id="Hp" value="hp">
+                            <label for="Hp">Hp<span class="contenedor__HpCant">0</span></label>
+                        </div>            
+                    </div>
+                </div>
+                <div class="contenedor__tamanio">
+                    <h5 class="contenedor__pantalla">Tamanio de pantalla <i class="fa-solid fa-plus"></i></h5>
+                    <div class="contenedor__pulgadas">
+                        <div class="contenedor__pulgada">
+                            <input type="checkbox" name="quince" id="quincePulgadas">
+                            <label for="quincePulgadas">15.6</label>
+                        </div>
+                        <div class="contenedor__pulgada">
+                            <input type="checkbox" name="catorce" id="catorcePulgadas">
+                            <label for="catorcePulgadas">14</label>
+                        </div>
+                        <div class="contenedor__pulgada">
+                            <input type="checkbox" name="trece" id="trecePulgadas">
+                            <label for="trecePulgadas">13.3</label>
+                        </div>
+                        <div class="contenedor__pulgada">
+                            <input type="checkbox" name="diecisiete" id="diecisietePulgadas">
+                            <label for="diecisietePulgadas">17.6</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenedor__precio">
+                    <h5 class="contenedor__precios">Rango de Precios <i class="fa-solid fa-plus"></i></h5>
+                    <div class="contenedor__rango">
+                        <div class="contenedor__rangoPrecios">
+                            <input type="checkbox" name="" id="">
+                            <label for="">$100.000 - $400.000</label>
+                        </div>
+                        <div class="contenedor__rangoPrecios">
+                            <input type="checkbox" name="" id="">
+                            <label for="">$100.000 - $400.000</label>
+                        </div>
+                        <div class="contenedor__rangoPrecios">
+                            <input type="checkbox" name="" id="">
+                            <label for="">$100.000 - $400.000</label>
+                        </div>
+                        <div class="contenedor__rangoPrecios">
+                            <input type="checkbox" name="" id="">
+                            <label for="">$100.000 - $400.000</label>
+                        </div>
+                        <div class="contenedor__rangoPrecios">
+                            <input type="checkbox" name="" id="">
+                            <label for="">$100.000 - $400.000</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="contenedor__stock">
+                <div class="contenedor__laptop">
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./main.js"></script>
+    <script src="./productos.js"></script>
+</body>
+</html>
