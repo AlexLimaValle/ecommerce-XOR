@@ -16,6 +16,6 @@ class Laptop{
 
 }
 
-const hp245g8 = new Laptop("HP 245G8",14,"245G8","HP","256GB SSD","FULL HD","RYZEN 5 3500U","16GB","140000","INTEL IRIS","WINDOW 11");
+const hp245g8 = new Laptop("HP 245G8",14,"245g8","HP","256GB SSD","FULL HD","RYZEN 5 3500U","16GB","140000","INTEL IRIS","WINDOW 11");
 
 const stock = [hp245g8];
