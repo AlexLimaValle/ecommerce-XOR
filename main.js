@@ -1,11 +1,16 @@
 const $bars = document.querySelector(".nav__bars");
 const $navBars = document.querySelector(".nav__navbar");
+const $shopping = document.querySelector(".nav__shopping");
+const $compras = document.querySelector(".header__compras");
 
 
 $bars.addEventListener("click",()=>{
     $navBars.classList.toggle("nav__active");
 })
 
+$shopping.addEventListener("click",()=>{
+    $compras.classList.toggle("header__comprasActive");
+})
 const $left = document.querySelector(".header__left");
 const $right = document.querySelector(".header__right");
 const $sliders = document.querySelector(".header__sliders");
@@ -61,7 +66,7 @@ function recorrerArray(array){
             <img src="" alt="pantalla" class="contenedor__pantallaImg">
         </div>
         <div class="contenedor__laptopImagen">
-            <img src="./img/laptop/hp/${e.modelo}.png" alt="imagen" class="contenedor__laptopImg">
+            <img src="./img/laptop/${e.marca}/${e.modelo}.png" alt="imagen" class="contenedor__laptopImg">
         </div>
         <h4 class="contenedor__laptopTitulo">${e.nombre}</h4>
         <div class="contenedor__laptopComponentes">
@@ -93,12 +98,58 @@ function recorrerArray(array){
         <div class="contenedor__precios">
             <p class="contenedor__precio">${e.precio}</p>
         </div>
-        <button class="contenedor__boton">Comprar</button>
+        <button class="contenedor__boton" id="${e.modelo}">Comprar</button>
         `;
-        $fragmento.appendChild($laptop);        
+        /* const $boton = document.getElementById(`${e.modelo}`);
+        $boton.addEventListener("click",()=>{
+            console.log("ok");
+        }); */
+        $fragmento.appendChild($laptop);
     })
 }
 
 recorrerArray(stock);
 
 $stockLaptop.appendChild($fragmento);
+
+
+const cantidadMarca = (marca)=>{
+    let contador = 0;
+    for(let i of stock){
+        if(i.marca == marca){
+            contador+=1;
+        }
+    }
+    console.log(contador)
+    return contador;
+}
+// cantidad de máquinas de una determinada MARCA:
+const $cantAcer = document.querySelector(".contenedor__AcerCant");
+$cantAcer.innerHTML = `(${cantidadMarca("ACER")})`;
+
+const $cantAsus = document.querySelector(".contenedor__AsusCant");
+$cantAsus.innerHTML = `(${cantidadMarca("ASUS")})`;
+
+const $cantDell = document.querySelector(".contenedor__DellCant");
+$cantDell.innerHTML = `(${cantidadMarca("DELL")})`;
+
+const $cantMsi = document.querySelector(".contenedor__MsiCant");
+$cantMsi.innerHTML = `(${cantidadMarca("MSI")})`;
+
+const $cantLenovo = document.querySelector(".contenedor__LenovoCant");
+$cantLenovo.innerHTML = `(${cantidadMarca("LENOVO")})`;
+
+const $cantHp = document.querySelector(".contenedor__HpCant");
+$cantHp.innerHTML = `(${cantidadMarca("HP")})`;
+
+// filtros:
+
+const $checks = document.querySelectorAll(".contenedor__check");
+
+/* se debe seleccionar todos los input que tiene el 
+nombre de clase llamado: class="contenedor__check", si
+todos estos son false, es decir $checks.cheked == false
+devuelve el stock, si todos los checked son falsos
+*/
+
+

@@ -117,6 +117,21 @@
             }
         }
     }
+    .header__compras{
+        position:fixed;
+        width: 30%;
+        height: 90vh;
+        background-color:greenyellow;
+        top: 10%;
+        right: 0;
+        transform: translateX(0%);
+        z-index: 14;
+        transition: all .9s;
+    }
+    .header__comprasActive{
+        transform: translateX(100%);
+        opacity: 0;
+    }
 }
 
 
