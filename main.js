@@ -45,6 +45,7 @@ $left.addEventListener("click",()=>{
 const $mark = document.querySelector(".contenedor__mark");
 
 window.addEventListener("scroll",()=>{
+    console.log(window.scrollY)
     $mark.classList.remove("contenedor__markActive");
 })
 
@@ -120,7 +121,6 @@ const cantidadMarca = (marca)=>{
             contador+=1;
         }
     }
-    console.log(contador)
     return contador;
 }
 // cantidad de máquinas de una determinada MARCA:
@@ -152,4 +152,22 @@ todos estos son false, es decir $checks.cheked == false
 devuelve el stock, si todos los checked son falsos
 */
 
+const $inputs = document.querySelectorAll(".contenedor__check");
+const $inputMarca = document.querySelector(".contenedor__checkMark");
+const cantidadImputs = $inputs.length;
+
+$inputMarca.addEventListener("click",(e)=>{
+    if(e.target.checked){
+        console.log(e.target.value)
+    }else{
+        console.log("false")
+    }
+})
+
+
+
+/* const controlador = (lista)=>{
+    let control = 0;
+    
+}  */
 

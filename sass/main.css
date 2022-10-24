@@ -12,8 +12,8 @@
   width: 100%;
   height: 10vh;
   position: fixed;
-  z-index: 4;
-  background-color: blue;
+  background-color: #ffffff;
+  z-index: 30;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -21,21 +21,33 @@
 .header .nav .nav__bars {
   width: 5%;
   height: 100%;
-  background-color: green;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
-.header .nav .nav__bars .nav__barsImg {
+.header .nav .nav__bars .nav__cuadrado {
+  width: 90%;
+  height: 70%;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+.header .nav .nav__bars .nav__cuadrado .nav__linear {
   width: 100%;
-  height: 100%;
+  height: 8%;
+  background-color: #000000;
 }
 .header .nav .nav__navbar {
   position: fixed;
   top: 10%;
   width: 100%;
+  background-color: #ffffff;
   height: 30vh;
-  background-color: red;
   top: 10%;
   transition: all 0.9s;
-  z-index: 1;
+  z-index: 3;
 }
 .header .nav .nav__active {
   opacity: 0.4;
@@ -44,7 +56,6 @@
 .header .nav .nav__icons {
   width: 10%;
   height: 100%;
-  background-color: violet;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -52,22 +63,27 @@
 }
 .header .nav .nav__icons .nav__title {
   display: inline-block;
-  background-color: lightcoral;
 }
 .header .nav .nav__icons .nav__icon {
   width: 60%;
   height: 100%;
-  background-color: coral;
 }
 .header .nav .nav__shopping {
   width: 5%;
   height: 100%;
-  background-color: red;
   position: relative;
+}
+.header .nav .nav__shopping .nav__cart {
+  width: 100%;
+  height: 100%;
 }
 .header .nav .nav__shopping .nav__product {
   position: absolute;
-  top: 0;
+  top: 18px;
+  left: 33px;
+  color: #ffffff;
+  font-size: 1rem;
+  background-color: #000000;
 }
 .header .header__carrusel {
   height: 100vh;
@@ -110,17 +126,20 @@
 .header .header__carrusel .header__sliders .header__slide-1 {
   height: 100%;
   width: 100%;
-  background-color: blue;
+  background: url(../../img/fondos/img-1.jpg);
+  background-size: cover;
 }
 .header .header__carrusel .header__sliders .header__slide-2 {
   height: 100%;
   width: 100%;
-  background-color: green;
+  background: url(../../img/fondos/img-2.jpg);
+  background-size: cover;
 }
 .header .header__carrusel .header__sliders .header__slide-3 {
   height: 100%;
   width: 100%;
-  background-color: yellow;
+  background: url(../../img/fondos/img-3.jpg);
+  background-size: cover;
 }
 .header .header__compras {
   position: fixed;
@@ -152,7 +171,6 @@
 .contenedor__marcas {
   height: 30vh;
   width: 100%;
-  background-color: tomato;
   overflow: hidden;
 }
 .contenedor__marcas .contenedor__mark {
