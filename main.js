@@ -101,10 +101,6 @@ function recorrerArray(array){
         </div>
         <button class="contenedor__boton" id="${e.modelo}">Comprar</button>
         `;
-        /* const $boton = document.getElementById(`${e.modelo}`);
-        $boton.addEventListener("click",()=>{
-            console.log("ok");
-        }); */
         $fragmento.appendChild($laptop);
     })
 }
@@ -112,6 +108,19 @@ function recorrerArray(array){
 recorrerArray(stock);
 
 $stockLaptop.appendChild($fragmento);
+
+let carritoDeCompras = [];
+const $navProduct = document.querySelector(".nav__product");
+
+stock.forEach((e)=>{
+      const $boton = document.getElementById(`${e.modelo}`);
+        $boton.addEventListener("click",()=>{
+            carritoDeCompras.push(e);
+            console.log(carritoDeCompras);
+            $navProduct.innerHTML = `${carritoDeCompras.length}`
+        }); 
+})
+
 
 
 const cantidadMarca = (marca)=>{
