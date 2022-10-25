@@ -61,10 +61,10 @@ function recorrerArray(array){
         $laptop.classList.add("contenedor__laptop")
         $laptop.innerHTML = `
         <div class="contenedor__laptopMarca">
-            <img src="" alt="asus 245g8" class="contenedor__marcaImg">
+            <img src="./img/marcas/${e.marca}.png" alt="asus 245g8" class="contenedor__marcaImg">
         </div>
         <div class="contenedor__laptopPantalla">
-            <img src="" alt="pantalla" class="contenedor__pantallaImg">
+            <img src="./img/Logos/${e.resolucion}.jpg" alt="pantalla" class="contenedor__pantallaImg">
         </div>
         <div class="contenedor__laptopImagen">
             <img src="./img/laptop/${e.marca}/${e.modelo}.png" alt="imagen" class="contenedor__laptopImg">
@@ -111,6 +111,7 @@ $stockLaptop.appendChild($fragmento);
 
 let carritoDeCompras = [];
 const $navProduct = document.querySelector(".nav__product");
+const $misCompras = document.querySelector(".header__misCompras");
 
 stock.forEach((e)=>{
       const $boton = document.getElementById(`${e.modelo}`);
@@ -120,6 +121,17 @@ stock.forEach((e)=>{
             $navProduct.innerHTML = `${carritoDeCompras.length}`
         }); 
 })
+
+const agregarProducto = (producto)=>{
+    const $misLaptops = document.createElement("DIV")
+    $misLaptops.classList.add("header__misLaptops");
+    $misLaptops.innerHTML = `
+        vg
+    `
+}
+
+
+
 
 
 

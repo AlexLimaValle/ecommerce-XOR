@@ -150,6 +150,20 @@
         transform: translateX(0%);
         z-index: 14;
         transition: all .9s;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        .header__misCompras{
+            background-color: red;
+            width: 100%;
+            height: 80%;
+            overflow: auto;
+        }
+        .header__totalAPagar{
+            background-color: green;
+            height: 15%;
+            width: 100%;
+        }
     }
     .header__comprasActive{
         transform: translateX(100%);

@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
 }
 
 .header {
@@ -155,6 +156,20 @@
   transform: translateX(0%);
   z-index: 14;
   transition: all 0.9s;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+.header .header__compras .header__misCompras {
+  background-color: red;
+  width: 100%;
+  height: 80%;
+  overflow: auto;
+}
+.header .header__compras .header__totalAPagar {
+  background-color: green;
+  height: 15%;
+  width: 100%;
 }
 .header .header__comprasActive {
   transform: translateX(100%);
@@ -219,13 +234,13 @@
   flex-flow: row wrap;
   row-gap: 20px;
   justify-content: space-evenly;
-  background-color: green;
 }
 .contenedor__productos .contenedor__stock .contenedor__laptops .contenedor__laptop {
   width: 30%;
   height: 70vh;
   background-color: #ffffff;
   display: grid;
+  border: 1px solid #000000;
   grid-template-columns: 50% 50%;
   grid-template-rows: repeat(10, 10%);
   grid-template-areas: "marca pantalla" "imagen imagen" "imagen imagen" "imagen imagen" "imagen imagen" "imagen imagen" "titulo titulo" "componentes componentes" "componentes componentes" "precio boton";
@@ -233,8 +248,19 @@
 .contenedor__productos .contenedor__stock .contenedor__laptops .contenedor__laptop .contenedor__laptopMarca {
   grid-area: marca;
 }
+.contenedor__productos .contenedor__stock .contenedor__laptops .contenedor__laptop .contenedor__laptopMarca .contenedor__marcaImg {
+  width: 60%;
+  height: 70%;
+}
 .contenedor__productos .contenedor__stock .contenedor__laptops .contenedor__laptop .contenedor__laptopPantalla {
   grid-area: pantalla;
+  position: relative;
+}
+.contenedor__productos .contenedor__stock .contenedor__laptops .contenedor__laptop .contenedor__laptopPantalla .contenedor__pantallaImg {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 70%;
 }
 .contenedor__productos .contenedor__stock .contenedor__laptops .contenedor__laptop .contenedor__laptopImagen {
   grid-area: imagen;
@@ -248,15 +274,16 @@
 }
 .contenedor__productos .contenedor__stock .contenedor__laptops .contenedor__laptop .contenedor__laptopComponentes {
   grid-area: componentes;
-  background-color: blue;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: repeat(3, 33%);
+  border-bottom: 1px #000000 solid;
 }
 .contenedor__productos .contenedor__stock .contenedor__laptops .contenedor__laptop .contenedor__laptopComponentes .contenedor__laptopComponente {
+  width: 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 .contenedor__productos .contenedor__stock .contenedor__laptops .contenedor__laptop .contenedor__laptopComponentes .contenedor__laptopComponente .contenedor__componenteImg {
@@ -264,15 +291,20 @@
   height: 100%;
 }
 .contenedor__productos .contenedor__stock .contenedor__laptops .contenedor__laptop .contenedor__laptopComponentes .contenedor__laptopComponente .contenedor__componenteParrafo {
-  background-color: green;
   width: 70%;
   height: 60%;
+  font-size: 11px;
 }
 .contenedor__productos .contenedor__stock .contenedor__laptops .contenedor__laptop .contenedor__precios {
   grid-area: precio;
 }
 .contenedor__productos .contenedor__stock .contenedor__laptops .contenedor__laptop .contenedor__boton {
   grid-area: boton;
+  border: none;
+  cursor: pointer;
+}
+.contenedor__productos .contenedor__stock .contenedor__laptops .contenedor__laptop .contenedor__boton:hover {
+  background-color: red;
 }
 .contenedor__productos .contenedor__stock .contenedor__laptops .contenedor__laptop .contenedor__laptopTitulo:nth-child(4) {
   justify-self: center;
