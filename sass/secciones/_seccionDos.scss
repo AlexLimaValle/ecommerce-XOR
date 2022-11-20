@@ -7,16 +7,86 @@
         width: 20%;
         height: auto;
         background-color: red;
+        .contenedor__formMark{
+            background-color: green;
+            width: 100%;
+            height: auto;
+            .contenedor__tituloMark{
+                width: 100%;
+                height: 5vh;
+                font-size: 2rem;
+                background-color: blue;
+                .contenedor__menosMark{
+                    display: none;
+                    margin-left: 50px;
+                }
+                .contenedor__masMark{
+                    margin-left: 50px;
+                }
+            }
+            .contenedor__checkMark{
+                width: 100%;
+                overflow: hidden;
+                height: 0vh;
+                background-color: coral;
+            }
+        }
+        .contenedor__tamanio{
+            width: 100%;
+            height: auto;
+            background-color: violet;
+            .contenedor__pantalla{
+                width: 100%;
+                height: 5vh;
+                font-size: 1.4rem;
+                background-color: blue;
+                .contenedor__masPantalla{
+                    margin-left: 5px;
+                }
+                .contenedor__menosPantalla{
+                    display: none;
+                }
+            }
+            .contenedor__pulgadas{
+                width: 100%;
+                overflow: hidden;
+                height: 0vh;
+                background-color: coral;
+            }
+        }
+        .contenedor__precio{
+            width: 100%;
+            height: auto;
+            background-color: violet;
+            .contenedor__precios{
+                width: 100%;
+                height: 5vh;
+                font-size: 1.4rem;
+                background-color: blue;
+                .contenedor__masPrecio{
+
+                }
+                .contenedor__menosPrecio{
+                    display: none;
+                }
+            }
+            .contenedor__rango{
+                width: 100%;
+                overflow: hidden;
+                height: 0vh;
+                background-color: coral;
+            }
+        }
     }
     .contenedor__stock{
         width: 80%;
         .contenedor__laptops{
-            width: 100%;
-            height: 100%;
             display: flex;
             flex-flow: row wrap;
-            row-gap: 20px;
+            height: 100%;
             justify-content: space-evenly;
+            row-gap: 20px;
+            width: 100%;
             .contenedor__laptop{
                 width: 30%;
                 height: 70vh;

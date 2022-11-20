@@ -45,8 +45,9 @@ $left.addEventListener("click",()=>{
 const $mark = document.querySelector(".contenedor__mark");
 
 window.addEventListener("scroll",()=>{
-    console.log(window.scrollY)
-    $mark.classList.remove("contenedor__markActive");
+    if(window.scrollY > 0){
+        $mark.classList.remove("contenedor__markActive");
+    }
 })
 
 //stock:
@@ -126,7 +127,16 @@ const agregarProducto = (producto)=>{
     const $misLaptops = document.createElement("DIV")
     $misLaptops.classList.add("header__misLaptops");
     $misLaptops.innerHTML = `
-        vg
+        <div class="header__laptopImg">
+            <img src="./img/laptop/${producto.marca}/${producto.modelo}.png">
+        </div>
+        <h4 class="header__laptopTitulo">${producto.nombre}-${producto.modelo}</h4>
+        <div class="header__laptopPrecio">
+            <p class="header__laptopPrecioNum">${producto.precio}</p>
+        </div>
+        <div class="header__laptopBorrar">
+            
+        </div>
     `
 }
 
@@ -192,3 +202,45 @@ $inputMarca.addEventListener("click",(e)=>{
     
 }  */
 
+
+// -----------------------------
+
+const $markPlus = document.querySelector(".contenedor__masMark");
+const $menosMark = document.querySelector(".contenedor__menosMark");
+const $checkMark = document.querySelector(".contenedor__checkMark");
+
+
+function plus(suma,x,y,z){
+    suma.addEventListener("click",()=>{
+        x.style.height = "auto";
+        y.style.display = "none";
+        z.style.display = "inline";
+    })
+}
+
+function minus(menos,x,y,z){
+    menos.addEventListener("click",()=>{
+        x.style.height = "0vh";
+        y.style.display = "none";
+        z.style.display = "inline"; 
+    })
+}
+
+plus($markPlus,$checkMark,$markPlus,$menosMark);
+minus($menosMark,$checkMark,$menosMark,$markPlus);
+
+const $checkPulgadas = document.querySelector(".contenedor__pulgadas");
+const $menosPulgadas = document.querySelector(".contenedor__menosPantalla");
+const $masPulgadas = document.querySelector(".contenedor__masPantalla");
+
+plus($masPulgadas,$checkPulgadas,$masPulgadas,$menosPulgadas);
+minus($menosPulgadas,$checkPulgadas,$menosPulgadas,$masPulgadas);
+
+const $checkPrecio = document.querySelector(".contenedor__rango");
+
+const $menosPrecios = document.querySelector(".contenedor__menosPrecio");
+
+const $masPrecios = document.querySelector(".contenedor__masPrecio");
+
+plus($masPrecios,$checkPrecio,$masPrecios,$menosPrecios);
+minus($menosPrecios,$checkPrecio,$menosPrecios,$masPrecios);
